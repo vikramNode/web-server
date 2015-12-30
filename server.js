@@ -21,6 +21,17 @@ app.get('/about', function(req, res){
     res.sendFile(__dirname +'/public' + '/about.html');
 });
 
+app.get('/contact', function(req, res){
+    //res.send('About Us');
+    res.sendFile(__dirname +'/public' + '/about.html');
+});
+
+
+app.get('/contact', function(req, res){
+    //res.send('About Us');
+    res.sendFile(__dirname +'/public' + '/about.html');
+});
+
 app.use(express.static(__dirname + '/public'));
 
 var port = 3000;
