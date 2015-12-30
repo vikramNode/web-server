@@ -32,11 +32,17 @@ app.get('/contact', function(req, res){
     res.sendFile(__dirname +'/public' + '/about.html');
 });
 
+
+app.get('/LivePlanner', function(req, res){
+    //res.send('LivePlanner');
+    res.sendFile(__dirname +'/public' + '/about.html');
+});
+
 app.use(express.static(__dirname + '/public'));
 
 var port = 3000;
 
 app.listen(port, function(){
-    console.log('Port running on '+ port + ' ');
+    console.log('Port running on '+ port + 'Running ');
 }
     );
