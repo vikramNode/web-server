@@ -37,7 +37,6 @@ app.use(express.static(__dirname + '/public'));
 var port = 3000;
 
 app.listen(port, function(){
-    console.log('Port running on '+ port);
+    console.log('Port running on '+ port + ' ');
 }
     );
-
