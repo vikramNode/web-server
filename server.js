@@ -34,9 +34,11 @@ app.get('/contact', function(req, res){
 
 
 app.get('/LivePlanner', function(req, res){
-    //res.send('LivePlanner');
+    //res.send('LivePlanner
+    ');
     res.sendFile(__dirname +'/public' + '/about.html');
 });
+
 
 app.use(express.static(__dirname + '/public'));
 
