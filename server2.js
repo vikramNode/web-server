@@ -22,9 +22,13 @@ app.get('/', function(req,res){
 })
 
 app.get('/aboutus', function(req,res){
-    res.send('Hello About Us');
+    res.send
+    
+    ('Hello About Us');
     //console.log("got a Response");
 })
+
+
 
 app.listen(3000, function(){
     console.log('Express Server Started!');
