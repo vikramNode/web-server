@@ -2,15 +2,7 @@ var express = require('express');
 
 var app = express();
 
-//adding middleware
-var middleware = {
-    requireAuth: function(req, res, next){
-        var date = new Date;
-        console.log(req.method + ' '+ req.originalUrl+' '+ date);
-        console.log("Private Route Hit");
-        next();
-    }
-};
+var middleware = require('./middleware');
 
 app.use(middleware.requireAuth);
 
@@ -33,18 +25,11 @@ app.get('/contact', function(req, res){
 });
 
 
-app.get('/LivePlanner', function(req, res){
-    //res.send('LivePlanner
-    ');
-    res.sendFile(__dirname +'/public' + '/about.html');
-});
-
-
 app.use(express.static(__dirname + '/public'));
 
 var port = 3000;
 
 app.listen(port, function(){
-    console.log('Port running on '+ port + 'Running ');
+    console.log('Port running on '+ port + ' Running ');
 }
     );
