@@ -26,9 +26,6 @@ app.get('/aboutus', function(req,res){
     //console.log("got a Response");
 })
 
-
-
 app.listen(3000, function(){
     console.log('Express Server Started!');
 });
-
